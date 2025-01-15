@@ -74,3 +74,11 @@ exports.getAdjustments = async(req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+exports.getNelacaLajur = async(req,res)=>{
+  try {
+    const neracaLajur = await Transaction.getNelacaLajur();
+    res.json(neracaLajur);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}

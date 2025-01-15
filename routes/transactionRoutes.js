@@ -6,6 +6,5 @@ router.get('/:type/hal', transactionController.getHalTransactions);
 router.get('/:type/list', transactionController.getTransactions);
 router.post('/send', transactionController.createTransaction); //jurnal umum
 router.get('/ledger/:ref', transactionController.getLedger); //buku besar
-router.get('/trial-balance', transactionController.getTrialBalance); //neraca saldo
-router.get('/adjustments', transactionController.getAdjustments); // neraca penyesuaian
+router.get('/neraca-lajur', transactionController.getNelacaLajur); //neraca lajur
 module.exports = router;
